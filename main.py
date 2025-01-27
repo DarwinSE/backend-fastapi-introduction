@@ -5,11 +5,11 @@ app = FastAPI()
 
 # run del server uvicorn main:app --reload
 
-@app.get('/')
+@app.get('/', tags = ['root'])
 async def root():
     return 'Hola FastAPI'
 
-@app.get('/url')
+@app.get('/url', tags = ['root'])
 async def url():
     return {'url_generica': 'https://youtube.com'}
 
