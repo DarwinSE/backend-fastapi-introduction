@@ -8,7 +8,7 @@ from jose import jwt
 
 from passlib.context import CryptContext
 
-router = APIRouter()
+router = APIRouter(tags = ['jwt authentication'])
 
 oauth2 = OAuth2PasswordBearer(tokenUrl = 'login')
 
